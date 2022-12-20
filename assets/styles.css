@@ -21,22 +21,41 @@ nav {
 	align-items: center;
 	justify-content: flex-end;
 }
-
-#projects div[data-template="card"]:first-child {
-	/* flex: 2; */
+header * {
+	margin: 1em 0 1em 1em;
+}
+div.hero div[data-template="card"] {
+	flex: 2;
 	width: 100%;
 }
 
-#projects div[data-template="card"]:not(:first-child) {
+div.projects div[data-template="card"] {
 	background-color: var(--color-bg);
-	/* flex: 1; */
+	flex: 1;
 	width: 50%;
+	min-width: 200px;
+}
+
+@media screen and (max-width: 960px) {
+	div.projects div[data-template="card"] {
+		width: 100%;
+		min-width: 50%;
+	}
+}
+@media screen and (max-width: 600px) {
+	div.projects div[data-template="card"] {
+		width: 100%;
+		min-width: 100%;
+	}
 }
 
 #projects {
+	width: calc(100% - 2em);
+	margin: 1em;
+}
+div.projects {
 	display: flex;
 	flex-wrap: wrap;
-	width: 100%;
 }
 h1 {
 	font-size: 200%;
@@ -48,6 +67,11 @@ h2 {
 h3 {
 	font-size: 150%;
 }
+h1,
+h2,
+h3 {
+	margin: 20px 0px;
+}
 nav ul li {
 	display: inline-block;
 	margin: 0 10px;
@@ -58,4 +82,45 @@ nav ul li {
 nav ul li a {
 	color: var(--linen);
 	text-decoration: none;
+}
+
+#about-me {
+	margin: 1em 1em;
+}
+.project-card {
+	padding: 8px;
+	min-width: 200px;
+}
+.project-card .content a {
+	display: block;
+	position: relative;
+}
+.project-card .content a img,
+.project-card .content a {
+	width: 100%;
+}
+.project-card .content a h3 {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	padding-left: 1em;
+	margin-bottom: 0px;
+	padding-right: 1em;
+	color: var(--linen);
+	background-color: var(--dark-blue-gray);
+	border-radius: 0px 8px 0px 0px;
+	height: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+a {
+	color: var(--portland-orange);
+}
+a:focus {
+	color: var(--dark-blue-gray);
+}
+footer {
+	margin-bottom: 100px;
 }
