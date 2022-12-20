@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ian's portfolio</title>
+		<template id="card-template">
+			<div class="project-card">
+				<div class="image">
+					<img src="{{image-url}}" alt="{{image-alt}}" />
+				</div>
+				<div class="content">
+					<h3 class="title">{{title}}</h3>
+					<p class="description">{{description}}</p>
+					<a href="{{project-url}}" class="link">View Project</a>
+				</div>
+			</div>
+		</template>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/css-reset@0.0.1/reset.css"
+		/>
+		<link rel="stylesheet" href="./assets/styles.css" />
+	</head>
+
+	<body>
+		<section>
+			<h1>Hi, I'm Ian</h1>
+			<p>I'm a web developer</p>
+		</section>
+		<section>
+			<h2>My projects</h2>
+			<div
+				data-template="card"
+				data-image-url="http://www.example.com/image.png"
+				data-image-alt="hello world"
+				data-title="hello world"
+				data-description="hi"
+				data-project-url="http://www.example.com"
+			></div>
+		</section>
+		<section>
+			<h2>Contact Me</h2>
+		</section>
+		<script src="./assets/main.js"></script>
+	</body>
+</html>
