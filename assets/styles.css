@@ -51,5 +51,11 @@ h3 {
 nav ul li {
 	display: inline-block;
 	margin: 0 10px;
-	background-color: ;
+	background-color: var(--dark-blue-gray);
+	padding: 8px;
+	border-radius: 8px;
+}
+nav ul li a {
+	color: var(--linen);
+	text-decoration: none;
 }
